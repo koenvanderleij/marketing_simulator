@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app1:
+    build:
+      context: ./Persona_generator
+    ports:
+      - "8001:5001"
+    env_file:
+      - .env
+
+  app2:
+    build:
+      context: ./Marketing_simulation
+    ports:
+      - "8002:5002"
+    env_file:
+      - .env
+    depends_on:
+      - app1

@@ -1,0 +1,5 @@
+flask
+langchain
+langchain-community
+openai
+pydantic
